@@ -66,7 +66,6 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
-// Menu mobile para contatos
 const menuMobile = document.createElement('div');
 menuMobile.classList.add('menu-mobile');
 menuMobile.innerHTML = `
