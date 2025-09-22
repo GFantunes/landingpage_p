@@ -192,10 +192,11 @@ body {
 
 .skills ul {
     font-family: 15px;
+    border-left: 4px solid #1650ad; 
     padding-left: 20px;             
     margin-left: 0;
     list-style: disc inside;
-    padding: 10px;
+
 }
 
 .skills ul li {
