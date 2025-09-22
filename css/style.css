@@ -292,3 +292,79 @@ body.light-mode .contatos a:hover {
     background-color: #2563eb;
 }
 
+/* responsividade dos contatos*/
+
+@media (max-width: 600px) {
+
+    .contato-container ul.contatos {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 20px;
+        left: 20px; 
+        z-index: 10000;
+    }
+
+    #menu-toggle {
+        display: inline-block;
+        background-color: #3B82F6;
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    #menu-toggle:hover {
+        background-color: #2563eb;
+        transform: scale(1.05);
+    }
+
+    #menu-content {
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    #menu-content a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        background-color: #3B82F6;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    #menu-content a:hover {
+        background-color: #2563eb;
+        transform: scale(1.05);
+    }
+
+    #menu-content.show {
+        display: flex;
+    }
+}
+
+@media (min-width: 601px) {
+    .menu-mobile {
+        display: none;
+    }
+    .contato-container ul.contatos {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+

@@ -65,3 +65,24 @@ toggleButton.addEventListener('click', () => {
         toggleButton.textContent = '☀️';
     }
 });
+
+// Menu mobile para contatos
+const menuMobile = document.createElement('div');
+menuMobile.classList.add('menu-mobile');
+menuMobile.innerHTML = `
+    <button id="menu-toggle">&#9776;</button>
+    <div id="menu-content" class="menu-content">
+        <a href="mailto:Pamellaluiza10@gmail.com"><img class="icons" src="fotos/email-svgrepo-com.svg" alt="">Email</a>
+        <a href="tel:+553196269705"><img class="icons" src="fotos/telephone-svgrepo-com.svg" alt="">Telefone</a>
+        <a target="_blank" href="https://www.linkedin.com/in/pamella-luiza-659307260"><img class="icons" src="fotos/linkedin-svgrepo-com.svg" alt="">Linkedin</a>
+    </div>
+`;
+
+document.body.appendChild(menuMobile);
+
+const menuToggle = document.getElementById('menu-toggle');
+const menuContent = document.getElementById('menu-content');
+
+menuToggle.addEventListener('click', () => {
+    menuContent.classList.toggle('show');
+});
